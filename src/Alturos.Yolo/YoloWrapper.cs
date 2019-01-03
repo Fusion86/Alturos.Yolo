@@ -12,8 +12,8 @@ namespace Alturos.Yolo
     public class YoloWrapper : IDisposable
     {
         public const int MaxObjects = 1000;
-        private const string YoloLibraryCpu = @"x64\yolo_cpp_dll_cpu.dll";
-        private const string YoloLibraryGpu = @"x64\yolo_cpp_dll_gpu.dll";
+        private const string YoloLibraryCpu = @"yolo_cpp_dll_cpu";
+        private const string YoloLibraryGpu = @"yolo_cpp_dll_gpu";
 
         private Dictionary<int, string> _objectType = new Dictionary<int, string>();
         private ImageAnalyzer _imageAnalyzer = new ImageAnalyzer();
@@ -122,7 +122,7 @@ namespace Alturos.Yolo
             }
 
             var lines = File.ReadAllLines(namesFilename);
-            for (var i = 0; i< lines.Length; i++)
+            for (var i = 0; i < lines.Length; i++)
             {
                 this._objectType.Add(i, lines[i]);
             }
@@ -168,7 +168,7 @@ namespace Alturos.Yolo
             var report = new EnvironmentReport();
             report.MicrosoftVisualCPlusPlus2017RedistributableExists = this.IsMicrosoftVisualCPlusPlus2017Available();
 
-            if (File.Exists(@"x64\cudnn64_7.dll"))
+            if (File.Exists(@"cudnn64_7.dll"))
             {
                 report.CudnnExists = true;
             }
