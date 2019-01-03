@@ -86,7 +86,7 @@ namespace Alturos.Yolo
         {
             if (IntPtr.Size != 8)
             {
-                throw new NotSupportedException("Only 64-bit process are supported");
+                throw new NotSupportedException("Only 64-bit processes are supported");
             }
 
             this.EnvironmentReport = this.GetEnvironmentReport();
@@ -203,7 +203,7 @@ namespace Alturos.Yolo
 
             if (count == -1)
             {
-                throw new NotImplementedException("c++ dll compiled incorrectly");
+                throw new NotImplementedException("C++ dll compiled incorrectly");
             }
 
             return this.Convert(container);
@@ -237,7 +237,7 @@ namespace Alturos.Yolo
 
                 if (count == -1)
                 {
-                    throw new NotImplementedException("c++ dll compiled incorrectly");
+                    throw new NotImplementedException("C++ dll compiled incorrectly");
                 }
             }
             catch (Exception exception)

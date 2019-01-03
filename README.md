@@ -7,7 +7,7 @@ A state of the art real-time object detection system for C# (Visual Studio). Thi
 ## nuget
 Quick install Alturos.Yolo over [nuget](https://www.nuget.org/packages/Alturos.Yolo)
 ```
-PM> install-package Alturos.Yolo (c# wrapper and c++ dlls 22MB)
+PM> install-package Alturos.Yolo (C# wrapper and C++ dlls 22MB)
 PM> install-package Alturos.YoloV2TinyVocData (Pre-Trained Dataset 56MB)
 ```
 
@@ -102,8 +102,8 @@ http://cocodataset.org/
     ├── Alturos.Yolo.dll              # C# yolo wrapper
     ├── x64/
     │   ├── yolo_cpp_dll_cpu.dll      # yolo runtime for cpu
-    │   ├── yolo_cpp_dll_gpu.dll      # yolo runtime fot gpu
-    │   ├── cudnn64_7.dll             # required by yolo_cpp_dll_gpu (optional only required for gpu processig)
+    │   ├── yolo_cpp_dll_gpu.dll      # yolo runtime for gpu
+    │   ├── cudnn64_7.dll             # required by yolo_cpp_dll_gpu (optional, only required for gpu processig)
     │   ├── opencv_world340.dll       # required by yolo_cpp_dll_xxx (process image as byte data detect_mat)
     │   ├── pthreadGC2.dll            # required by yolo_cpp_dll_xxx (POSIX Threads)
     │   ├── pthreadVC2.dll            # required by yolo_cpp_dll_xxx (POSIX Threads)
