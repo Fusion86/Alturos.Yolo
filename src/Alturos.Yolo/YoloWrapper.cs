@@ -18,7 +18,7 @@ namespace Alturos.Yolo
         private Dictionary<int, string> _objectType = new Dictionary<int, string>();
         private ImageAnalyzer _imageAnalyzer = new ImageAnalyzer();
 
-        public DetectionSystem DetectionSystem = DetectionSystem.Unknown;
+        public DetectionSystem DetectionSystem { get; private set; } = DetectionSystem.Unknown;
         public EnvironmentReport EnvironmentReport { get; private set; }
 
         #region DllImport Cpu
